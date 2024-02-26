@@ -1,7 +1,11 @@
 const ExtraInformation = () => {
   return (
     <>
-      <section></section>
+      <section className="sm:w-3/5 w-full mx-auto flex md:gap-4 lg:gap-6 gap-2  px-6 py-3 ">
+        <article className="border-2 bg-purple-50 opacity-70 flex-1">1</article>
+        <article className="border-2 bg-purple-50 opacity-70 flex-1">2</article>
+        <article className="border-2 bg-purple-50 opacity-70 flex-1">3</article>
+      </section>
     </>
   );
 };

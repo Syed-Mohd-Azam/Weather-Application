@@ -1,7 +1,7 @@
 const WeatherInformation = () => {
   return (
     <>
-      <section></section>
+      <section className="sm:w-3/5 w-full mx-auto py-10 px-6 flex-1"></section>
     </>
   );
 };
