@@ -5,7 +5,7 @@ const Search = () => {
         <input
           type="search"
           placeholder="Search City"
-          className="w-full border-none outline-none text-black px-6 py-3 rounded-full bg-purple-50 bg-opacity-80 lg:text-3xl italic md:text-2xl tex-xl placeholder-black font-semibold"
+          className="w-full border-none outline-none text-black px-6 py-3 rounded-full bg-purple-50 bg-opacity-60 lg:text-3xl italic md:text-2xl tex-xl placeholder-black font-semibold"
         />
       </section>
     </>
