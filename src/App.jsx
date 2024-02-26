@@ -5,12 +5,11 @@ function App() {
   return (
     <>
       <section
-        className="min-h-screen w-full  bg-cover bg-no-repeat bg-center "
+        className="min-h-screen w-full  bg-cover bg-no-repeat bg-center brightness-50"
         style={{
           backgroundImage: "url(/src/assets/Background.jpg)",
         }}
       >
-        <section className="absolute inset-0 bg-black opacity-70"></section>
         <Search />
         <WeatherInformation />
         <ExtraInformation />
