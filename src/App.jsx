@@ -4,7 +4,15 @@ import ExtraInformation from "./components/ExtraInformation";
 function App() {
   return (
     <>
-      <section>
+      <section
+        className="min-h-screen w-full  "
+        style={{
+          backgroundImage: "url(/src/assets/Background.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
         <Search />
         <WeatherInformation />
         <ExtraInformation />
