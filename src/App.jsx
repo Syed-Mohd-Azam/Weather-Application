@@ -1,5 +1,5 @@
 import Search from "./components/Search";
-
+import WeatherInformation from "./components/WeatherInformation";
 function App() {
   return (
     <>
