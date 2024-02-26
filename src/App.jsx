@@ -1,7 +1,13 @@
+import Search from "./components/Search";
+
 function App() {
   return (
     <>
-      <section></section>
+      <section>
+        <Search />
+        <WeatherInformation />
+        <ExtraInformation />
+      </section>
     </>
   );
 }
