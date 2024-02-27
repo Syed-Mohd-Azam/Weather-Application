@@ -10,3 +10,16 @@ WeatherApp is a responsive and sleek weather application built with React and Vi
 - Vite: A fast and efficient front-end build tool.
 - Tailwind CSS: A utility-first CSS framework for rapid UI development.
 - OpenWeather API: Provides weather data from around the globe.
+## Getting Started
+- Clone the Repository :
+  git clone https://github.com/your-username/WeatherApp.git
+- Install Dependencies :
+  cd WeatherApp
+  npm install
+- Run the Application:
+  npm run dev
+  The application will be accessible at http://localhost:5173
+## Acknowledgments
+- Thanks to OpenWeather for providing the weather data API.
+- Inspired by the desire to create a simple and effective weather application.
+Feel free to contribute, report issues, or suggest improvements!
