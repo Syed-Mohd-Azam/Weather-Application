@@ -6,3 +6,7 @@ WeatherApp is a responsive and sleek weather application built with React and Vi
 - Search by City: Easily search for the weather in any city around the world by typing the city name in the search bar.
 - Tailwind CSS Styling: The application is styled using Tailwind CSS, ensuring a clean and modern design with a mobile-friendly layout.
 ## Tech Stack
+- React: A JavaScript library for building user interfaces.
+- Vite: A fast and efficient front-end build tool.
+- Tailwind CSS: A utility-first CSS framework for rapid UI development.
+- OpenWeather API: Provides weather data from around the globe.
