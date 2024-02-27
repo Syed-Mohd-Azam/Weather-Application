@@ -9,7 +9,7 @@ const Search = ({ city, setCity, fetchWeatherData }) => {
           value={city}
           onChange={(event) => setCity(event.target.value)}
           onKeyDown={(event) => event.key === "Enter" && fetchWeatherData()}
-          className="w-full border-none outline-none text-black px-6 py-3 rounded-full bg-purple-50 bg-opacity-60 lg:text-3xl italic md:text-2xl tex-xl placeholder-black font-semibold"
+          className="w-full border-none outline-none text-blue-900 px-6 py-3 rounded-full bg-purple-50 bg-opacity-60 lg:text-3xl italic md:text-2xl tex-xl placeholder-blue-900 font-semibold"
         />
       </section>
     </>
