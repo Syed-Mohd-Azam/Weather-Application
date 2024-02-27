@@ -1,4 +1,9 @@
-const ExtraInformation = () => {
+/* eslint-disable react/prop-types */
+const ExtraInformation = ({ weatherInfo }) => {
+  console.log(weatherInfo);
+  if (weatherInfo?.length === 0) {
+    return;
+  }
   return (
     <>
       <section className="sm:w-3/5 w-full mx-auto flex md:gap-4 lg:gap-6 gap-2  px-6 py-3 ">

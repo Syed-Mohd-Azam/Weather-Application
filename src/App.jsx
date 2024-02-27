@@ -2,23 +2,20 @@ import Search from "./components/Search";
 import WeatherInformation from "./components/WeatherInformation";
 import ExtraInformation from "./components/ExtraInformation";
 import { useState } from "react";
-import { useEffect } from "react";
 import { APP_ID, WEATHER_CITY_API } from "./utils/constants";
 function App() {
   const [weatherInfo, setWeatherInfo] = useState([]);
   const [city, setCity] = useState("");
-  useEffect(() => {
-    fetchWeatherData(city);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [city]);
-  const fetchWeatherData = async (city) => {
+  const fetchWeatherData = async () => {
+    if (city.trim() === "") {
+      alert("Please Enter City Name :");
+      setCity("");
+    }
     const weatherData = await fetch(WEATHER_CITY_API + city + APP_ID);
     const jsonData = await weatherData.json();
+    console.log(jsonData);
     setWeatherInfo(jsonData);
   };
-  if (weatherInfo?.length === 0) {
-    return null;
-  }
   return (
     <>
       <section
@@ -27,9 +24,13 @@ function App() {
           backgroundImage: "url(/src/assets/Background.jpg)",
         }}
       >
-        <Search city={city} setCity={setCity} />
-        <WeatherInformation />
-        <ExtraInformation />
+        <Search
+          city={city}
+          setCity={setCity}
+          fetchWeatherData={fetchWeatherData}
+        />
+        <WeatherInformation weatherInfo={weatherInfo} />
+        <ExtraInformation weatherInfo={weatherInfo} />
       </section>
     </>
   );
