@@ -11,7 +11,9 @@ function App() {
       alert("Please Enter City Name :");
       setCity("");
     }
-    const weatherData = await fetch(WEATHER_CITY_API + city + APP_ID);
+    const weatherData = await fetch(
+      WEATHER_CITY_API + city + "&units=metric" + APP_ID
+    );
     const jsonData = await weatherData.json();
     console.log(jsonData);
     setWeatherInfo(jsonData);
