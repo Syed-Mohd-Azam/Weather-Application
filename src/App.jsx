@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <section
-        className="min-h-screen w-full  bg-cover bg-no-repeat bg-center brightness-50 flex flex-col gap-5"
+        className="min-h-screen w-full  bg-cover bg-no-repeat bg-center brightness-75 flex flex-col gap-5"
         style={{
           backgroundImage: "url(/src/assets/Background.jpg)",
         }}
