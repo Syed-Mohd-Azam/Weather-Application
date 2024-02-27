@@ -12,9 +12,9 @@ WeatherApp is a responsive and sleek weather application built with React and Vi
 - OpenWeather API: Provides weather data from around the globe.
 ## Getting Started
 - Clone the Repository :
-  git clone https://github.com/your-username/WeatherApp.git
+  git clone https://github.com/Syed-Mohd-Azam/Weather-Application.git
 - Install Dependencies :
-  - cd WeatherApp
+  - cd weather-application
   - npm install
 - Run the Application:
   npm run dev
