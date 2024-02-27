@@ -14,8 +14,8 @@ WeatherApp is a responsive and sleek weather application built with React and Vi
 - Clone the Repository :
   git clone https://github.com/your-username/WeatherApp.git
 - Install Dependencies :
-  cd WeatherApp
-  npm install
+  - cd WeatherApp
+  - npm install
 - Run the Application:
   npm run dev
   The application will be accessible at http://localhost:5173
