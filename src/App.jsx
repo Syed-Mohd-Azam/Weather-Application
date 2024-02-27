@@ -31,8 +31,8 @@ function App() {
           setCity={setCity}
           fetchWeatherData={fetchWeatherData}
         />
-        <WeatherInformation weatherInfo={weatherInfo} />
-        <ExtraInformation weatherInfo={weatherInfo} />
+        {!(city === "") && <WeatherInformation weatherInfo={weatherInfo} />}
+        {!(city === "") && <ExtraInformation weatherInfo={weatherInfo} />}
       </section>
     </>
   );
