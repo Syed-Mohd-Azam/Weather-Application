@@ -8,7 +8,6 @@ function App() {
   const [city, setCity] = useState("");
   const fetchWeatherData = async () => {
     if (city.trim() === "") {
-      alert("Please Enter City Name :");
       setCity("");
     }
     const weatherData = await fetch(
