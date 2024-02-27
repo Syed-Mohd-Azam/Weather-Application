@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 const WeatherInformation = ({ weatherInfo }) => {
-  console.log(weatherInfo);
+  console.log("mYiNFO", weatherInfo);
   if (weatherInfo?.length === 0) {
-    return;
+    return null;
   }
   const {
     name,

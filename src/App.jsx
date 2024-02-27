@@ -7,16 +7,32 @@ function App() {
   const [weatherInfo, setWeatherInfo] = useState([]);
   const [city, setCity] = useState("");
   const fetchWeatherData = async () => {
-    if (city.trim() === "") {
+    try {
+      if (city.trim() === "") {
+        setCity("");
+        setWeatherInfo([]);
+        return;
+      }
+      const weatherData = await fetch(
+        WEATHER_CITY_API + city + "&units=metric" + APP_ID
+      );
+      if (!weatherData.ok) {
+        const errorResponse = await weatherData.json();
+        if (errorResponse.cod === "404") {
+          console.log("City not found");
+        } else {
+          throw new Error(
+            `Weather data request failed with status: ${weatherData.status}`
+          );
+        }
+      }
+      const jsonData = await weatherData.json();
+      console.log(jsonData);
+      setWeatherInfo(jsonData);
+    } catch (error) {
       setCity("");
       setWeatherInfo([]);
     }
-    const weatherData = await fetch(
-      WEATHER_CITY_API + city + "&units=metric" + APP_ID
-    );
-    const jsonData = await weatherData.json();
-    console.log(jsonData);
-    setWeatherInfo(jsonData);
   };
   return (
     <>

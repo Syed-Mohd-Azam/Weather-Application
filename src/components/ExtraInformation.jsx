@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const ExtraInformation = ({ weatherInfo }) => {
   if (weatherInfo?.length === 0) {
-    return;
+    return null;
   }
   const {
     main: { feels_like, humidity },
