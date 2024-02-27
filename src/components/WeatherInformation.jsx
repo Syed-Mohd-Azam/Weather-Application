@@ -19,10 +19,10 @@ const WeatherInformation = ({ weatherInfo }) => {
           </p>
         </article>
         <article className=" flex flex-row justify-between p-3">
-          <p className="text-blue-900  bg-purple-50 opacity-75 p-2 rounded-lg md:text-7xl text-4xl">
+          <p className="text-blue-900  bg-purple-50 opacity-75 p-2 rounded-lg md:text-7xl text-3xl">
             {temp}&#176;C
           </p>
-          <p className=" transition-transform -rotate-90 text-blue-900 bg-purple-50 p-2 opacity-75 rounded-lg md:text-7xl text-4xl">
+          <p className=" transition-transform -rotate-90 text-blue-900 bg-purple-50 p-2 opacity-75 rounded-lg md:text-7xl text-2xl">
             {weather?.[0]?.main}
           </p>
         </article>
