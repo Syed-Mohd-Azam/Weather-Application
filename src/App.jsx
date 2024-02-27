@@ -9,6 +9,7 @@ function App() {
   const fetchWeatherData = async () => {
     if (city.trim() === "") {
       setCity("");
+      setWeatherInfo([]);
     }
     const weatherData = await fetch(
       WEATHER_CITY_API + city + "&units=metric" + APP_ID
