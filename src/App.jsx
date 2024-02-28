@@ -6,10 +6,12 @@ import { APP_ID, WEATHER_CITY_API } from "./utils/constants";
 function App() {
   const [weatherInfo, setWeatherInfo] = useState([]);
   const [city, setCity] = useState("");
+  const [error, setError] = useState("");
   const fetchWeatherData = async () => {
     try {
       if (city.trim() === "") {
         setCity("");
+        setError("Please enter the correct city name! ");
         setWeatherInfo([]);
         return;
       }
@@ -28,9 +30,11 @@ function App() {
       }
       const jsonData = await weatherData.json();
       console.log(jsonData);
+      setError("");
       setWeatherInfo(jsonData);
     } catch (error) {
       setCity("");
+      setError("City not found!");
       setWeatherInfo([]);
     }
   };
@@ -47,8 +51,17 @@ function App() {
           setCity={setCity}
           fetchWeatherData={fetchWeatherData}
         />
-        {!(city === "") && <WeatherInformation weatherInfo={weatherInfo} />}
-        {!(city === "") && <ExtraInformation weatherInfo={weatherInfo} />}
+        {error && (
+          <>
+            <section className="w-3/5  p-5 flex justify-center items-center  text-blue-900 font-semibold mx-auto rounded-lg mt-20">
+              <p className="text-center italic text-3xl bg-purple-50 bg-opacity-60 p-5 rounded-xl rotate-50 animate-bounce">
+                {error}
+              </p>
+            </section>
+          </>
+        )}
+        {!error && <WeatherInformation weatherInfo={weatherInfo} />}
+        {!error && <ExtraInformation weatherInfo={weatherInfo} />}
       </section>
     </>
   );
