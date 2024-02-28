@@ -33,7 +33,6 @@ function App() {
       setError("");
       setWeatherInfo(jsonData);
     } catch (error) {
-      setCity("");
       setError("City not found!");
       setWeatherInfo([]);
     }
