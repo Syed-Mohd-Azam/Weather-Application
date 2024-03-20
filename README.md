@@ -24,4 +24,4 @@ WeatherApp is a responsive and sleek weather application built with React and Vi
 - Inspired by the desire to create a simple and effective weather application.
 Feel free to contribute, report issues, or suggest improvements!
 ## 🎉Project Link 🧡
-Netlify Link : https://glittering-otter-4a9d76.netlify.app/ 
+🎉Netlify Link : https://glittering-otter-4a9d76.netlify.app/ 
